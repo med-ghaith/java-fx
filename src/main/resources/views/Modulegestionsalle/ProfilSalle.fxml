@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="883.0" prefWidth="1908.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.changemakers.sportshub.controller.Modulegestionsalle.ProfilSalleController">
+    <center>
+        <AnchorPane prefHeight="883.0" prefWidth="1866.0">
+            <children>
+                <ScrollPane layoutX="43.0" layoutY="2.0" prefHeight="874.0" prefWidth="1863.0" stylesheets="@../../assets/css/stylescrollpane.css">
+               <content>
+                  <VBox prefHeight="1414.0" prefWidth="1838.0">
+                     <children>
+                        <HBox prefHeight="255.0" prefWidth="1464.0">
+                           <children>
+                              <AnchorPane prefHeight="260.0" prefWidth="1847.0">
+                                 <children>
+                                        <ImageView fx:id="ImageCouverture" disable="true" fitHeight="198.0" fitWidth="1229.0" layoutX="280.0" pickOnBounds="true">
+                                            <image>
+                                                <Image url="@../../assets/imgs/imagecouverture.jpg" />
+                                            </image>
+                                            <cursor>
+                                                <Cursor fx:constant="CLOSED_HAND" />
+                                            </cursor>
+                                        </ImageView>
+                                        <BorderPane layoutX="183.0" layoutY="75.0" prefHeight="155.0" prefWidth="172.0" style="-fx-border-color: #100d0d;">
+                                       <center>
+                                          <AnchorPane prefHeight="152.0" prefWidth="170.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                      <ImageView fx:id="Imageprofil" fitHeight="159.0" fitWidth="169.0" pickOnBounds="true">
+                                                          <image>
+                                                              <Image url="@../../assets/imgs/california.png" />
+                                                          </image>
+                                                          <cursor>
+                                                              <Cursor fx:constant="CLOSED_HAND" />
+                                                          </cursor>
+                                                      </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                       </center>
+                                        </BorderPane>
+                                        <Label fx:id="lblname" layoutX="366.0" layoutY="205.0" prefHeight="35.0" prefWidth="315.0" text="Label" textFill="#fffcfc">
+                                            <font>
+                                                <Font name="Bodoni MT Bold Italic" size="24.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="LabelId" textFill="#f2f0f0" visible="false" />
+                                    <ImageView fx:id="addphoto" fitHeight="31.0" fitWidth="26.0" layoutX="174.0" layoutY="211.0" onMouseClicked="#onChoseFile" pickOnBounds="true" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../../assets/imgs/PinClipart.com_digital-camera-clip-art_5671192.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                              <HBox prefHeight="1147.0" prefWidth="1838.0">
+                                  <children>
+                                      <VBox prefHeight="1138.0" prefWidth="773.0">
+                                          <children>
+                                              <Label prefHeight="34.0" prefWidth="110.0" text="Description :" textFill="#f7f3f3" />
+                                              <TextArea fx:id="tfdescription" disable="true" editable="false" onKeyPressed="#Modifier" prefHeight="170.0" prefWidth="706.0" />
+                                              <Label prefHeight="18.0" prefWidth="69.0" text="Adresse :" textFill="#f4f3f3" />
+                                              <TextField fx:id="tflocation" disable="true" editable="false" onKeyPressed="#Modifier" prefHeight="26.0" prefWidth="303.0" />
+                                              <Pane prefHeight="15.0" prefWidth="750.0" />
+                                              <HBox prefHeight="28.0" prefWidth="714.0">
+                                                  <children>
+                                                      <Button fx:id="btn" mnemonicParsing="false" onAction="#Abonner" prefHeight="26.0" prefWidth="324.0" text="S'abonner" />
+                                                      <Pane prefHeight="28.0" prefWidth="6.0" />
+                                                      <Button fx:id="btncontact" mnemonicParsing="false" prefHeight="26.0" prefWidth="337.0" text="Contact" />
+                                                  </children>
+                                              </HBox>
+                                                <GridPane fx:id="gridreview" prefHeight="856.0" prefWidth="706.0">
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                </GridPane>
+                                          </children>
+                                      </VBox>
+                                      <Pane prefHeight="1138.0" prefWidth="292.0" />
+                                      <VBox prefHeight="1138.0" prefWidth="758.0">
+                                          <children>
+                                        <HBox prefHeight="24.0" prefWidth="758.0">
+                                            <children>
+                                                <Label prefHeight="42.0" prefWidth="164.0" text="Video " textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Bodoni MT Bold Italic" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                                <Pane prefHeight="38.0" prefWidth="517.0" />
+                                                <ImageView fx:id="iconplus" accessibleRole="BUTTON" fitHeight="37.0" fitWidth="37.0" onMouseClicked="#Add" pickOnBounds="true" preserveRatio="true" visible="false">
+                                                    <image>
+                                                        <Image url="@../../assets/imgs/iconplus.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </children>
+                                        </HBox>
+                                              <GridPane fx:id="grid" prefHeight="3.0" prefWidth="2.0">
+                                                  <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                              </GridPane>
+                                          </children>
+                                      </VBox>
+                                  </children>
+                              </HBox>
+                     </children>
+                  </VBox>
+               </content>
+               <styleClass>
+                  <String fx:value="scroll-pane" />
+                  <String fx:value="corner" />
+                  <String fx:value="viewport" />
+               </styleClass>
+                </ScrollPane>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

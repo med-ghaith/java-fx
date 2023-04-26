@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor2" prefHeight="944.0" prefWidth="1790.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.changemakers.sportshub.controller.ViewProductController">
+   <children>
+      <ImageView fx:id="imageProduct" fitHeight="944.0" fitWidth="1814.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/imgs/Workout-Wallpaper-01-1600-x-843.jpg" />
+         </image></ImageView>
+      <Pane layoutX="238.0" layoutY="247.0" opacity="0.42" prefHeight="436.0" prefWidth="380.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="-1.0" layoutY="146.0" prefHeight="27.0" prefWidth="103.0" styleClass="lbl_user" stylesheets="@../assets/css/style.css" text="PRICE" />
+            <TextField fx:id="nom" alignment="BOTTOM_CENTER" layoutX="98.0" layoutY="14.0" prefHeight="44.0" prefWidth="283.0" promptText="NAME" stylesheets="@../assets/css/style.css">
+               <font>
+                  <Font name="Bauhaus 93" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="textfiled" />
+                  <String fx:value="lbl_user" />
+                  <String fx:value="button1" />
+               </styleClass>
+            </TextField>
+            <Button fx:id="imageBrowse" layoutX="156.0" layoutY="83.0" minHeight="18.0" mnemonicParsing="false" onAction="#imageBrowse" prefHeight="38.0" prefWidth="205.0" styleClass="textfiled" stylesheets="@../assets/css/style.css" text="imageBrowse" />
+            <TextField fx:id="price" alignment="BOTTOM_CENTER" layoutX="146.0" layoutY="137.0" prefHeight="19.0" prefWidth="211.0" promptText="PRICE" stylesheets="@../assets/css/style.css">
+               <font>
+                  <Font name="Bauhaus 93" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="textfiled" />
+                  <String fx:value="lbl_user" />
+                  <String fx:value="button1" />
+               </styleClass>
+            </TextField>
+            <TextArea fx:id="desc" layoutX="152.0" layoutY="217.0" prefHeight="147.0" prefWidth="211.0" stylesheets="@../assets/css/style.css">
+               <font>
+                  <Font size="18.0" />
+               </font></TextArea>
+            <ImageView fx:id="ivProduit" fitHeight="117.0" fitWidth="110.0" layoutX="17.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true" />
+            <Button layoutX="27.0" layoutY="381.0" mnemonicParsing="false" onAction="#update" prefHeight="38.0" prefWidth="142.0" stylesheets="@../assets/css/style.css" text="UPDATE" textAlignment="CENTER">
+               <styleClass>
+                  <String fx:value="button3" />
+                  <String fx:value="lbl_user" />
+               </styleClass>
+            </Button>
+            <Button layoutX="183.0" layoutY="383.0" mnemonicParsing="false" onAction="#delete" prefHeight="34.0" prefWidth="142.0" stylesheets="@../assets/css/style.css" text="DELETE" textAlignment="CENTER">
+               <styleClass>
+                  <String fx:value="button3" />
+                  <String fx:value="lbl_status" />
+               </styleClass>
+            </Button>
+         </children>
+      </Pane>
+      <Button layoutX="218.0" layoutY="173.0" mnemonicParsing="false" onAction="#addproduct" prefHeight="47.0" prefWidth="178.0" text="ADD PRODUCT">
+         <styleClass>
+            <String fx:value="Fpss" />
+            <String fx:value="Remme" />
+            <String fx:value="button1" />
+            <String fx:value="buttonH" />
+         </styleClass>
+         <stylesheets>
+            <URL value="@../assets/css/style.css" />
+            <URL value="@../assets/css/style.css" />
+         </stylesheets></Button>
+      <Label layoutX="239.0" layoutY="458.0" prefHeight="27.0" prefWidth="122.0" styleClass="lbl_user" stylesheets="@../assets/css/style.css" text="DESCRIPTION" />
+      <Label layoutX="236.0" layoutY="330.0" prefHeight="27.0" prefWidth="110.0" styleClass="lbl_user" stylesheets="@../assets/css/style.css" text="IMAGE" />
+      <Label layoutX="232.0" layoutY="272.0" prefHeight="27.0" prefWidth="110.0" styleClass="lbl_user" stylesheets="@../assets/css/style.css" text="NAME" />
+      <ScrollPane layoutX="597.0" layoutY="149.0" prefHeight="618.0" prefWidth="1006.0" stylesheets="@../assets/css/style.css">
+         <content>
+            <GridPane fx:id="grid">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <Label fx:id="id" layoutX="1485.0" layoutY="541.0" />
+      <Label fx:id="id" layoutX="222.0" layoutY="859.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1003.0" prefWidth="1500.0" stylesheets="@../assets/css/homeCss.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.changemakers.sportshub.controller.DashbordAdminController">
+   <top>
+      <HBox fx:id="navBar" alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="402.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="297.0">
+                     <children>
+                        <HBox prefHeight="36.0" prefWidth="191.0">
+                           <children>
+                              <ImageView fitHeight="113.0" fitWidth="191.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/imgs/SporthubLogo.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="idUser" visible="false" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="254.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="186.0" text="Welcome back Mr ">
+                                 <font>
+                                    <Font name="Segoe UI Black Italic" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="userName1" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="navBarHbox" alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="1718.0" spacing="70.0" stylesheets="@../assets/css/navBarCss.css" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="125.0">
+                     <children>
+                        <Label onMouseClicked="#loadProduct" text="Product">
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="-30.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="117.0">
+                     <children>
+                        <Label text="Users">
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="-30.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="152.0">
+                     <children>
+                        <Label onMouseClicked="#loadExercices" text="Exercices">
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="-10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="97.0">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="133.0" text="Meals">
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="-15.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="182.0">
+                     <children>
+                        <Label onMouseClicked="#loadReclamation" text="Reclamation">
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="-10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="152.0">
+                     <children>
+                        <Label text="Statistics">
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="118.0">
+                     <children>
+                        <Label text="Sign-in">
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="-20.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="128.0">
+                     <children>
+                        <Label text="Sign-up">
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="-10.0" right="-20.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets right="30.0" />
+         </padding>
+      </HBox>
+   </top>
+</BorderPane>

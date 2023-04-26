@@ -1,0 +1,33 @@
+.label,.text{
+    -fx-text-fill: #cfa930;
+    -fx-font-family: "Segoe UI Black";
+    -fx-font-size: 20px;
+}
+#textDesc{
+    -fx-font-family: "Segoe UI Black";
+    -fx-font-size: 20px;
+}
+#item{
+    /*-fx-pref-width: 400px;
+    -fx-max-height: 600;
+    -fx-max-height: 450px;
+    -fx-pref-height: 600px;
+    -fx-max-width: 500px;
+    -fx-tab-max-height: 600px;*/
+    -fx-pref-width: 500px;
+    -fx-max-height: 800;
+    -fx-pref-height: 800px;
+    -fx-tab-max-height: 500px;
+    -fx-background-color: #000000;
+    -fx-border-radius: 20;
+    -fx-border-width: 5;
+    -fx-border-color: #265896;
+    -fx-background-radius: 20;
+    -fx-opacity: 1;
+
+}
+.button{
+    -fx-background-color: #ef2f2f;
+    -fx-border-radius: 30px;
+}
+

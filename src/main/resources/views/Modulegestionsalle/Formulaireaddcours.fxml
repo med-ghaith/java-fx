@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="883.0" prefWidth="1908.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.changemakers.sportshub.controller.Modulegestionsalle.FormulairecoursController">
+   <top>
+      <AnchorPane prefHeight="200.0" prefWidth="967.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="Add" layoutX="21.0" layoutY="159.0" mnemonicParsing="false" onAction="#Add" prefHeight="26.0" prefWidth="98.0" text="Ajouter" />
+            <Button layoutX="150.0" layoutY="158.0" mnemonicParsing="false" onAction="#Update" prefHeight="26.0" prefWidth="98.0" text="Modifier" />
+            <Button layoutX="282.0" layoutY="157.0" mnemonicParsing="false" onAction="#Delete" prefHeight="26.0" prefWidth="98.0" text="Supprimer" />
+            <Button layoutX="411.0" layoutY="157.0" mnemonicParsing="false" onAction="#Reset" prefHeight="26.0" prefWidth="127.0" text="Vider les cases " />
+            <TextField fx:id="tfnamecours" layoutX="31.0" layoutY="51.0" promptText="Nom cours " />
+            <TextArea fx:id="tfdescription" layoutX="31.0" layoutY="86.0" prefHeight="61.0" prefWidth="495.0" promptText="Description du cours" />
+            <Label fx:id="lblname" layoutX="31.0" layoutY="15.0" prefHeight="18.0" prefWidth="212.0" text="Name" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfurlvideo" layoutX="242.0" layoutY="51.0" prefHeight="25.0" prefWidth="178.0" promptText="Ajouter votre video" />
+            <Button fx:id="Addvideo" layoutX="437.0" layoutY="51.0" mnemonicParsing="false" onAction="#Addvideo" prefHeight="25.0" prefWidth="72.0" text="Video" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <Button mnemonicParsing="false" onAction="#Back" prefHeight="38.0" prefWidth="145.0" text="Retour" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <VBox prefHeight="446.0" prefWidth="958.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="646.0" prefWidth="1908.0" stylesheets="@../../assets/css/stylescrollpane.css">
+               <children>
+                  <ScrollPane prefHeight="555.0" prefWidth="1908.0">
+                     <content>
+                        <GridPane fx:id="grid">
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+               <styleClass>
+                  <String fx:value="scroll-bar" />
+                  <String fx:value="scroll-pane" />
+               </styleClass>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

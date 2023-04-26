@@ -1,0 +1,19 @@
+#chatHbox{
+    -fx-background-color: #d4d9d9;
+}
+
+/*.root {
+    -fx-background-color: #000000;
+}*/
+
+#messagesScroll *{
+    -fx-background-color: #e3e9e9;
+}
+.text-field * {
+    -fx-background-color: #fafdfd;
+
+}
+.button{
+    -fx-background-color: #fafdfd;
+    -fx-border-radius: 15;
+}

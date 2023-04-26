@@ -1,0 +1,15 @@
+#borderPane{
+    -fx-background-image: url("../imgs/calisthWallPaper.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 1920 1000;
+    -fx-background-position: center center;
+}
+#downloadPdf{
+    -fx-font-size: 20px;
+    -fx-text-fill: #000000;
+    -fx-background-radius: 50px;
+    -fx-background-color: #FDAF01;
+    -fx-border-radius: 20px;
+    -fx-opacity: 0.8;
+
+}

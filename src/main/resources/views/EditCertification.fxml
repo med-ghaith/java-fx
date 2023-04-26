@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="200.0" minWidth="-Infinity" prefWidth="880.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.changemakers.sportshub.controller.EditCertificationController">
+   <children>
+      <Label prefHeight="21.0" prefWidth="913.0" text="Edit Certification">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="50.0" top="30.0" />
+         </padding>
+      </Label>
+      <VBox fx:id="certificationCardContainer" prefWidth="880.0" />
+      <JFXButton fx:id="addCertif" onAction="#onAddCertif" style="-fx-background-color: black;" text="Add Certification" textFill="#ffbb00">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="100.0" top="40.0" />
+         </VBox.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</VBox>

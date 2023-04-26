@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.media.MediaView?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="847.0" prefWidth="1463.0" stylesheets="@../../assets/css/interfacevideo.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.changemakers.sportshub.controller.Modulegestionsalle.InterfaceVideoController">
+   <top>
+      <AnchorPane prefHeight="31.0" prefWidth="902.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutY="1.0" mnemonicParsing="false" onAction="#Back" prefHeight="31.0" prefWidth="81.0" text="Retour" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <BorderPane fx:id="controlBorderPane" prefHeight="35.0" prefWidth="902.0" styleClass="bottompanel" BorderPane.alignment="CENTER">
+         <left>
+            <HBox prefHeight="35.0" prefWidth="622.0" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <HBox prefHeight="35.0" prefWidth="157.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="35.0" prefWidth="237.0">
+                     <children>
+                        <Button fx:id="stopBT" layoutX="50.0" mnemonicParsing="false" onAction="#resetMedia">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/imgs/icon/stop.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="pauseBT" layoutX="88.0" layoutY="1.0" mnemonicParsing="false" onAction="#pauseMedia" visible="false">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../assets/imgs/icon/pause.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="playBT" layoutX="88.0" mnemonicParsing="false" onAction="#playMedia">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../assets/imgs/icon/play.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </center>
+         <right>
+            <HBox prefHeight="35.0" prefWidth="262.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="35.0" prefWidth="11.0" />
+                  <AnchorPane prefHeight="35.0" prefWidth="29.0">
+                     <children>
+                        <Button fx:id="volumeoffBT" mnemonicParsing="false" onMouseClicked="#changeMute" prefWidth="30.0" visible="false">
+                           <graphic>
+                              <ImageView fx:id="volumeoff" fitHeight="23.0" fitWidth="24.0" onMouseClicked="#changeMute" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/imgs/icon/volume_off.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="volumeonBT" mnemonicParsing="false" onMouseClicked="#changeMute" prefWidth="30.0">
+                           <graphic>
+                              <ImageView fx:id="volumeon" fitHeight="23.0" fitWidth="24.0" onMouseClicked="#changeMute" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/imgs/icon/volume_on.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <Slider fx:id="volumeSD" prefHeight="34.0" prefWidth="182.0" value="100.0" />
+               </children>
+            </HBox>
+         </right>
+      </BorderPane>
+   </bottom>
+   <center>
+      <AnchorPane fx:id="mainPanel" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <MediaView fx:id="mediaview" fitHeight="770.0" fitWidth="1463.0" onMouseClicked="#onPlayMouse" />
+            <ImageView fx:id="imgplay" fitHeight="150.0" fitWidth="200.0" layoutX="657.0" layoutY="310.0" onMouseClicked="#onPlayMouse" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/imgs/icon/background.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

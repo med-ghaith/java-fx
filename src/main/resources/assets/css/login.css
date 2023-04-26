@@ -1,0 +1,4 @@
+#pane {
+	-fx-background-image: url(../imgs/login.jpg) no-repeat center;
+	-fx-background-attachment: fixed;
+}

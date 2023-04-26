@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="299.0" prefWidth="569.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.changemakers.sportshub.controller.ShowReviewGymController">
+   <children>
+      <Label fx:id="idComm" visible="false">
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </Label>
+      <Label fx:id="idc" visible="false" />
+      <Label text="User :">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </Label>
+      <Label fx:id="userc" prefHeight="27.0" prefWidth="525.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </Label>
+      <Label fx:id="datec" prefHeight="27.0" prefWidth="332.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </Label>
+      <Label fx:id="commentairec" prefHeight="40.0" prefWidth="512.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </Label>
+      <Rating fx:id="ratec" maxHeight="37.0" minHeight="5.0" prefHeight="37.0" prefWidth="176.0" rating="0.0">
+         <effect>
+            <DropShadow color="#473e98" spread="0.84" />
+         </effect>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </Rating>
+   </children>
+   <VBox.margin>
+      <Insets left="10.0" />
+   </VBox.margin>
+</VBox>

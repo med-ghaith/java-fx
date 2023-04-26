@@ -1,0 +1,27 @@
+#imgVbox{
+    -fx-max-width: 1300;
+    -fx-background-image: url("../imgs/coachBotBackground.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 1000 1000;
+    -fx-background-position: center center;
+}
+#chatHbox{
+    -fx-background-color: #d4d9d9;
+}
+
+.root *{
+    -fx-background-color: #000000;
+}
+
+#messagesScroll *{
+    -fx-background-color: #e3e9e9;
+}
+.text-field * {
+    -fx-background-color: #fafdfd;
+
+}
+.button{
+    -fx-background-color: #fafdfd;
+    -fx-border-radius: 15;
+}
+

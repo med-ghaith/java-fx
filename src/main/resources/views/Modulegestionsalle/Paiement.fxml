@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="281.0" prefWidth="454.0" style="-fx-border-radius: 20;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.changemakers.sportshub.controller.Modulegestionsalle.PaiementController">
+   <center>
+        <AnchorPane id="AnchorPane" prefHeight="531.0" prefWidth="566.0" style="-fx-background-color: #d59708; -fx-border-radius: 20;" stylesheets="@../../assets/css/style.css" BorderPane.alignment="CENTER">
+            <children>
+            <HBox layoutX="14.0" layoutY="31.0" prefHeight="32.0" prefWidth="436.0" stylesheets="@../../assets/css/style.css">
+               <children>
+                  <Pane prefHeight="32.0" prefWidth="38.0" />
+                  <Label prefHeight="32.0" prefWidth="102.0" text="Card number" />
+                      <TextField fx:id="carte" prefHeight="32.0" prefWidth="189.0" promptText="4111 1111 1111 1111" styleClass="transparent" stylesheets="@../../assets/css/style.css" />
+               </children>
+               <styleClass>
+                  <String fx:value="shadow" />
+                  <String fx:value="search-box" />
+               </styleClass>
+            </HBox>
+                <Button fx:id="valider" layoutX="247.0" layoutY="155.0" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: rgb(185,131,0); -fx-border-color: #f7f7f9;" text="Valider" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="Annuler" layoutX="67.0" layoutY="155.0" onAction="#annuler" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #b98300; -fx-border-color: #f7f7f9;" text="Annuler" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+            <HBox layoutX="14.0" layoutY="82.0" prefHeight="32.0" prefWidth="436.0" stylesheets="@../../assets/css/style.css">
+               <children>
+                  <Pane prefHeight="32.0" prefWidth="26.0" />
+                  <Label prefHeight="32.0" prefWidth="55.0" text="Expiry" />
+                      <TextField fx:id="month" prefHeight="32.0" prefWidth="45.0" promptText="MM" styleClass="transparent" stylesheets="@../../assets/css/style.css" />
+                  <Label prefHeight="37.0" prefWidth="6.0" text="/" />
+                      <TextField fx:id="year" prefHeight="32.0" prefWidth="46.0" promptText="YY" styleClass="transparent" stylesheets="@../../assets/css/style.css" />
+                  <Label prefHeight="32.0" prefWidth="48.0" text="CVC" />
+                      <TextField fx:id="cvc" prefHeight="32.0" prefWidth="69.0" promptText="123" styleClass="transparent" stylesheets="@../../assets/css/style.css" />
+               </children>
+               <styleClass>
+                  <String fx:value="shadow" />
+                  <String fx:value="search-box" />
+               </styleClass>
+            </HBox>
+                <TextField fx:id="prix" layoutX="14.0" layoutY="129.0" prefHeight="9.0" prefWidth="14.0" style="-fx-background-radius: 1em;" visible="false" />
+            </children>
+        </AnchorPane>
+   </center>
+   <top>
+      <HBox prefHeight="58.0" prefWidth="478.0" style="-fx-border-color: #f7f7f9;" styleClass="menubar" stylesheets="@../../assets/css/interfacevideo.css" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="70.0" prefWidth="20.0" />
+            <RadioButton mnemonicParsing="false" pickOnBounds="false" prefHeight="70.0" prefWidth="26.0" selected="true" stylesheets="@../../assets/css/style.css">
+               <font>
+                  <Font name="Bell MT" size="24.0" />
+               </font></RadioButton>
+            <Label prefHeight="70.0" prefWidth="158.0" text="Debit/credit card" textFill="#faf6f6">
+               <font>
+                  <Font name="Bodoni MT" size="24.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="59.0" prefWidth="118.0" />
+            <ImageView fitHeight="59.0" fitWidth="120.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../assets/imgs/cardimage.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

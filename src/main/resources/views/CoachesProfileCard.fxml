@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane hbarPolicy="NEVER" maxHeight="900.0" maxWidth="640.0" minHeight="900.0" minWidth="640.0" prefHeight="900.0" prefWidth="640.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.changemakers.sportshub.controller.CoachesProfileCardController">
+   <content>
+      <VBox minHeight="200.0" prefHeight="1171.0" prefWidth="643.0">
+         <children>
+            <HBox alignment="CENTER" prefWidth="530.0">
+               <children>
+                  <Circle fx:id="profilePhoto" fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+               </children>
+            </HBox>
+            <Label fx:id="nomTitle" alignment="CENTER" prefHeight="21.0" prefWidth="610.0" text="Nom Prenom">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="220.0" prefHeight="21.0" prefWidth="610.0" text="Coach" textFill="#cacacc">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+            <Pane minHeight="50.0" prefWidth="530.0" />
+            <Separator prefHeight="17.0" prefWidth="611.0" />
+            <HBox alignment="CENTER" prefWidth="530.0">
+               <children>
+                  <JFXButton layoutX="171.0" layoutY="10.0" onAction="#onCheckPlanning" style="-fx-background-color: #ff9b42; -fx-background-radius: 100px;" text="Check Planning">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Label text="Description :">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="40.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="description" alignment="TOP_LEFT" prefHeight="87.0" prefWidth="529.0" textAlignment="JUSTIFY" wrapText="true">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="437.0" text="Certifications :">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <ScrollPane hbarPolicy="NEVER" minHeight="250.0" pannable="true" prefHeight="300.0" prefWidth="200.0" vbarPolicy="NEVER">
+               <content>
+                  <VBox fx:id="certifContainer" prefWidth="0.0" />
+               </content>
+            </ScrollPane>
+            <HBox prefWidth="530.0">
+               <children>
+                  <Label text="City :">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="city" text="Tunis">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="19.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="614.0" prefWidth="530.0">
+               <children>
+                  <Label text="Birth Date :">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="birthDate" text="02-07-1998">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="19.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefWidth="530.0">
+               <children>
+                  <JFXButton style="-fx-background-color: #03191E; -fx-background-radius: 100px;" text="Contact me" textFill="#ff9b42" fx:id="contact">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <Pane minHeight="200.0" prefWidth="530.0" />
+            <Separator prefHeight="6.0" prefWidth="5.0">
+               <effect>
+                  <DropShadow color="#e0d6d6" />
+               </effect>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Separator>
+            <HBox prefWidth="530.0">
+               <children>
+                  <AnchorPane prefWidth="530.0">
+                     <children>
+                        <Circle fill="#db2955" layoutX="140.0" layoutY="48.0" radius="34.0" stroke="#db2955" strokeType="INSIDE" />
+                        <Circle fill="#5c95ff" layoutX="368.0" layoutY="48.0" radius="34.0" stroke="#5c95ff" strokeType="INSIDE" />
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="125.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/imgs/phone-call.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="phoneNumber" layoutX="101.0" layoutY="87.0" text="58411494">
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="353.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/imgs/mail.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="email" layoutX="272.0" layoutY="87.0" text="ouniahmed@gmail.com">
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+   </content>
+</ScrollPane>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="862.0" prefWidth="1888.0" stylesheets="@../assets/css/homeCss.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.changemakers.sportshub.controller.HomeController">
+   <top>
+      <HBox fx:id="navBar" alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="1906.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1955.0" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="318.0">
+                     <children>
+                        <HBox prefHeight="36.0" prefWidth="191.0">
+                           <children>
+                              <ImageView fitHeight="113.0" fitWidth="191.0" onMouseClicked="#loadHome" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/imgs/SporthubLogo.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="idUserLb" visible="false" />
+                              <Label fx:id="changIdC" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="254.0">
+                           <children>
+                              <Label fx:id="welcomeMsg" prefHeight="30.0" prefWidth="182.0" text="Welcome back Mr " visible="false">
+                                 <font>
+                                    <Font name="Segoe UI Black Italic" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="userName" prefHeight="30.0" prefWidth="132.0">
+                                 <font>
+                                    <Font name="Segoe UI Black Italic" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox fx:id="navBarHbox" alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="1500.0" spacing="70.0" stylesheets="@../assets/css/navBarCss.css" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label onMouseClicked="#loadChat" text="messages" />
+                        <Label fx:id="shop" onMouseClicked="#loadShop" text="Shop">
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label onMouseClicked="#loadGym" prefHeight="43.0" prefWidth="73.0" text="Gyms">
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label onMouseClicked="#Planning" text="Coaches">
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label onMouseClicked="#loadChatBot" text="CoachBot">
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label onMouseClicked="#goToReview" prefHeight="39.0" prefWidth="106.0" text="Contact">
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="signInLabel" onMouseClicked="#loadLogin" text="Sign-in">
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="signUpLabel" onMouseClicked="#loadSignup" text="Sign-up">
+                           <font>
+                              <Font name="Segoe UI Black Italic" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets right="30.0" />
+         </padding>
+      </HBox>
+   </top>
+</BorderPane>

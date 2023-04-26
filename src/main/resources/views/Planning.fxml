@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bp" prefHeight="800.0" prefWidth="1200.0" stylesheets="@../assets/css/PlanningMain.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.changemakers.sportshub.controller.PlanningController">
+   <children>
+      <StackPane layoutX="320.0" layoutY="100.0" opacity="0.85" prefHeight="700.0" prefWidth="1500.0" style="-fx-background-color: #02030A;">
+         <children>
+            <Pane fx:id="pnlCustomer" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="pnlOrders" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="pnlMenus" prefHeight="200.0" prefWidth="200.0">
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin></Pane>
+            <Pane fx:id="pnlOverview" prefHeight="600.0" prefWidth="778.0">
+               <children>
+                  <TextField fx:id="search" layoutX="1200.0" layoutY="38.0" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="Title" layoutX="57.0" layoutY="25.0" text="Planning" textFill="#e7e5e5">
+                     <font>
+                        <Font name="System Bold Italic" size="40.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hbLabels" alignment="CENTER_LEFT" layoutX="45.0" layoutY="106.0" prefHeight="40.0" prefWidth="1202.0" spacing="80.0" style="-fx-background-color: #02030A;">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="165.0" text="Start Date" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefHeight="18.0" prefWidth="175.0" text="End Date" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefHeight="18.0" prefWidth="129.0" text="CATEGORY" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefHeight="18.0" prefWidth="158.0" text="PRICE" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefHeight="18.0" prefWidth="374.0" text="NUMBER OF PLACES" textFill="#e7e5e5" />
+                     </children>
+                  </HBox>
+                  <ScrollPane fx:id="scrollPane" layoutX="15.0" layoutY="148.0" prefHeight="500.0" prefWidth="1400.0">
+                     <content>
+                        <VBox fx:id="pnItems" prefHeight="500.0" prefWidth="1400.0" spacing="5.0" style="-fx-background-color: #02030A;" />
+                     </content>
+                  </ScrollPane>
+                  <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="749.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Search_52px.png" />
+                     </image>
+                  </ImageView>
+                  <ChoiceBox fx:id="cbdate" layoutX="362.0" layoutY="41.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="cbcateg" layoutX="624.0" layoutY="41.0" prefWidth="150.0" />
+                  <ChoiceBox fx:id="cbprix" layoutX="870.0" layoutY="42.0" prefWidth="150.0" />
+                  <Label layoutX="383.0" layoutY="17.0" prefHeight="17.0" prefWidth="108.0" text="Filter By Date" textFill="#e43131">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="634.0" layoutY="17.0" prefHeight="21.0" prefWidth="131.0" text="Filter By Category" textFill="#e43131">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="889.0" layoutY="17.0" prefHeight="21.0" prefWidth="131.0" text="Filter By Price" textFill="#e43131">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+   <effect>
+      <DropShadow color="#1b1eeb" />
+   </effect>
+</AnchorPane>

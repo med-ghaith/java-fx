@@ -1,0 +1,12 @@
+#borderPane{
+    /*-fx-background-image: url("../imgs/calisthWallPaper.jpg");
+    -fx-background-repeat: no-repeat;*/
+    -fx-background-color: #000000;
+    /*-fx-background-size: 1920 1000;*/
+    /*-fx-background-position: center center;*/
+}
+
+.button{
+    -fx-background-color: #2ff371;
+    -fx-font-size: 25;
+}

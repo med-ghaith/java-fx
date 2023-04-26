@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1947.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.changemakers.sportshub.controller.intHomeController">
+   <center>
+      <ScrollPane prefHeight="900.0" prefWidth="1926.0" stylesheets="@../assets/css/stylescrollpane.css" BorderPane.alignment="CENTER">
+         <content>
+              <AnchorPane prefHeight="1000.0" prefWidth="1909.0">
+                  <children>
+                      <ImageView fitHeight="751.0" fitWidth="1878.0" layoutX="20.0" pickOnBounds="true">
+                          <image>
+                              <Image url="@../assets/imgs/home.jpg" />
+                          </image>
+                      </ImageView>
+                  <Line endX="129.199951171875" endY="1.8310546875E-4" layoutX="1713.0" layoutY="733.0" startX="-1641.5999755859375" startY="1.8310546875E-4" stroke="#eaeaea" strokeWidth="2.0" />
+                  <Label layoutX="249.0" layoutY="234.0" text="Description" textFill="#fffefe">
+                     <font>
+                        <Font name="Bell MT Bold" size="64.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="256.0" layoutY="325.0" prefHeight="32.0" prefWidth="1283.0" text="Sports hub is a platform that brings together the different sports coaches," textFill="#f4f4f4">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="256.0" layoutY="367.0" text="gyms, members as well as a lot of useful information in one place." textFill="WHITE">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="204.0" layoutY="469.0" mnemonicParsing="false" onAction="#Loadgyms" prefHeight="46.0" prefWidth="272.0" styleClass="search-button" stylesheets="@../assets/css/stylescrollpane.css" text="Checkout our gyms" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="497.0" layoutY="469.0" mnemonicParsing="false" onAction="#Loadcoaches" prefHeight="46.0" prefWidth="272.0" styleClass="search-button" stylesheets="@../assets/css/stylescrollpane.css" text="Checkout our coaches" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT" size="20.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="70.0" layoutY="757.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/imgs/Sporthub.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="485.0" layoutY="827.0" prefHeight="35.0" prefWidth="158.0" text="Newsletter" textFill="#f7f7f7">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="485.0" layoutY="888.0" prefHeight="33.0" prefWidth="276.0" promptText="Email" styleClass="search-box" stylesheets="@../assets/css/style.css" />
+                  <Button layoutX="773.0" layoutY="887.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="110.0" styleClass="search-button" stylesheets="@../assets/css/stylescrollpane.css" text="send" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="347.0" layoutY="541.0" mnemonicParsing="false" onAction="#Loadshop" prefHeight="46.0" prefWidth="272.0" styleClass="search-button" stylesheets="@../assets/css/stylescrollpane.css" text="Checkout our shop" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT" size="20.0" />
+                     </font>
+                  </Button>
+                  </children>
+              </AnchorPane>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

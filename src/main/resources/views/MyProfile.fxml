@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1220.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.changemakers.sportshub.controller.MyProfileController">
+   <left>
+      <VBox prefHeight="200.0" prefWidth="340.0" style="-fx-background-color: #13123A;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="270.0" prefWidth="340.0">
+               <children>
+                  <Circle fx:id="profilePhoto" fill="DODGERBLUE" onMouseClicked="#onPhotoClicked" radius="100.0" stroke="BLACK" strokeType="INSIDE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Circle>
+                  <Label fx:id="titleName" alignment="CENTER" prefHeight="21.0" prefWidth="424.0" text="Nom Prenom" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="99.0" prefWidth="340.0" />
+            <VBox prefHeight="363.0" prefWidth="340.0" spacing="30.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <HBox alignment="CENTER" onMouseClicked="#loadProfile" prefHeight="45.0" prefWidth="200.0" styleClass="selected" stylesheets="@../assets/css/MyProfile.css">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/imgs/user.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="40.0" prefWidth="218.0" text="Profile" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#loadEditProfile" prefHeight="45.0" prefWidth="200.0" styleClass="selected" stylesheets="@../assets/css/MyProfile.css">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/imgs/edit.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="40.0" prefWidth="218.0" text="Edit Profile" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#loadSecurity" prefHeight="45.0" prefWidth="200.0" styleClass="selected" stylesheets="@../assets/css/MyProfile.css">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/imgs/security.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="40.0" prefWidth="218.0" text="Security" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="160.0" prefHeight="45.0" prefWidth="200.0" styleClass="selected" stylesheets="@../assets/css/MyProfile.css">
+                     <children>
+                        <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/imgs/recla.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="40.0" prefWidth="218.0" text="Reclamation" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox fx:id="vBoxProfile" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="96.0" prefWidth="191.0" text="Profile">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="50.0" top="30.0" />
+                     </padding>
+                  </Label>
+                  <JFXButton onAction="#onManagePlanning" style="-fx-background-color: orange; -fx-background-radius: 50px;" text="Manage Planning">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="400.0" top="20.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Separator prefHeight="12.0" prefWidth="3520.0" />
+            <VBox prefHeight="628.0" prefWidth="880.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="1138.0" text="Profile Details :">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="50.0" top="30.0" />
+                     </padding>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="53.0" prefWidth="880.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="88.0" text="FirstName:">
+                           <HBox.margin>
+                              <Insets left="30.0" top="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="firstName" layoutX="40.0" layoutY="25.0" prefHeight="26.0" prefWidth="508.0" text="Ahmed">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="100.0" prefHeight="53.0" prefWidth="880.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="88.0" text="LastName:">
+                           <HBox.margin>
+                              <Insets left="30.0" top="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lastName" layoutX="40.0" layoutY="25.0" prefHeight="26.0" prefWidth="508.0" text="Ouni">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="153.0" prefHeight="53.0" prefWidth="880.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="88.0" text="City:">
+                           <HBox.margin>
+                              <Insets left="30.0" top="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="city" layoutX="40.0" layoutY="25.0" prefHeight="26.0" prefWidth="508.0" text="Tunis">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="206.0" prefHeight="53.0" prefWidth="880.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="88.0" text="Birth Date:">
+                           <HBox.margin>
+                              <Insets left="30.0" top="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="birthDate" layoutX="40.0" layoutY="25.0" prefHeight="26.0" prefWidth="508.0" text="1998-07-02">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="259.0" prefHeight="136.0" prefWidth="880.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="108.0" text="Description:">
+                           <HBox.margin>
+                              <Insets bottom="80.0" left="30.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="description" alignment="TOP_LEFT" layoutX="40.0" layoutY="25.0" prefHeight="121.0" prefWidth="508.0" text="hey whats up bro" wrapText="true">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label fx:id="contactInfo" layoutX="10.0" layoutY="10.0" prefHeight="34.0" prefWidth="880.0" text="Contact Info :">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="30.0" right="50.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <HBox fx:id="emailBox" alignment="CENTER" layoutX="10.0" layoutY="100.0" prefHeight="53.0" prefWidth="880.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="53.0" text="Email:">
+                           <HBox.margin>
+                              <Insets left="30.0" top="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="email" layoutX="40.0" layoutY="25.0" prefHeight="26.0" prefWidth="508.0" text="ouniahmed11906@gmail.com">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="phoneBox" alignment="CENTER" layoutX="10.0" layoutY="100.0" prefHeight="53.0" prefWidth="880.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="127.0" text="PhoneNumber:">
+                           <HBox.margin>
+                              <Insets left="30.0" top="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="phone" layoutX="40.0" layoutY="25.0" prefHeight="26.0" prefWidth="508.0" text="Ahmed">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

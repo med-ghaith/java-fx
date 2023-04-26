@@ -1,0 +1,11 @@
+.label{
+    -fx-font-size: 20pt;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Segoe UI Black";
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-opacity: 1;
+}
+.label:hover{
+    -fx-border-color: #FDAF01;
+    -fx-cursor: hand;
+}

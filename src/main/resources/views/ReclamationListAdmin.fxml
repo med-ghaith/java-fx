@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="1800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.changemakers.sportshub.controller.ListReclamationAdminController">
+   <children>
+      <TextField fx:id="cherchertxt" layoutX="513.0" layoutY="38.0" prefHeight="33.0" prefWidth="437.0" promptText="search" style="-fx-background-color: transparent; -fx-background-radius: 100; -fx-border-color: grey; -fx-border-radius: 100;" stylesheets="@../assets/css/table.css" />
+      <StackPane layoutX="36.0" layoutY="86.0" prefHeight="773.0" prefWidth="1738.0">
+         <children>
+            <TableView fx:id="list" prefHeight="488.0" prefWidth="891.0">
+              <columns>
+                <TableColumn fx:id="iduser" minWidth="0.0" prefWidth="0.0" text="id" />
+                <TableColumn fx:id="type" prefWidth="117.99996948242188" text="type" />
+                  <TableColumn fx:id="object" prefWidth="254.00003051757812" text="object" />
+                  <TableColumn fx:id="status" prefWidth="177.0" text="status" />
+                  <TableColumn fx:id="description" prefWidth="438.0" text="description" />
+                  <TableColumn fx:id="date" prefWidth="293.0" text="date" />
+                  <TableColumn fx:id="response" prefWidth="219.0" text="Response" />
+                  <TableColumn fx:id="delete" prefWidth="240.0" text="Delete" />
+              </columns>
+            </TableView>
+         </children>
+      </StackPane>
+      <Button fx:id="statsBtn" layoutX="1363.0" layoutY="39.0" mnemonicParsing="false" onAction="#OnClick" prefHeight="31.0" prefWidth="200.0" text="Statistics" />
+   </children>
+   <stylesheets>
+      <URL value="@../assets/css/DarkTheme.css" />
+      <URL value="@../assets/css/table.css" />
+   </stylesheets>
+</AnchorPane>

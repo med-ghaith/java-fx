@@ -1,0 +1,12 @@
+.root {
+    -fx-background-color: #101010;
+}
+
+#navBarHbox{
+    -fx-font-size: 20pt;
+    -fx-text-fill: #DBFFFF;
+    -fx-opacity: 0.8;
+}
+#navBar{
+    -fx-background-color: #1b1b1b;
+}

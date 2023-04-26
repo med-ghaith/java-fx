@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="460.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.changemakers.sportshub.controller.Modulegestionsalle.FormulairesalleController">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <AnchorPane prefHeight="512.0" prefWidth="771.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+              
+                  <TextField fx:id="tfName" layoutX="108.0" layoutY="86.0" />
+                  <TextField fx:id="tfLocation" layoutX="107.0" layoutY="122.0" prefHeight="26.0" prefWidth="184.0" />
+               <TextArea fx:id="tfDescription" layoutX="39.0" layoutY="208.0" prefHeight="158.0" prefWidth="263.0" />
+                  <Label layoutX="42.0" layoutY="89.0" prefHeight="19.0" prefWidth="52.0" text="Name :" textFill="#1b1b1b" />
+                  <Label layoutX="28.0" layoutY="126.0" prefHeight="18.0" prefWidth="74.0" text="Adresse :" textFill="#1b1b1b" />
+                  <Label layoutX="41.0" layoutY="181.0" text="Description :" textFill="#1b1b1b" />
+                  <Button layoutX="204.0" layoutY="389.0" mnemonicParsing="false" onAction="#Add" prefHeight="30.0" prefWidth="88.0" text="Créer" />
+                  <Button fx:id="closeButton" layoutX="320.0" layoutY="389.0" mnemonicParsing="false" onAction="#Annuler" prefHeight="30.0" prefWidth="88.0" text="annuler" />
+                  <Label layoutX="199.0" layoutY="61.0" text="Remplire Formulaire de la salle " textFill="#f7f5f5" />
+                  <Button fx:id="chosefile" layoutX="356.0" layoutY="96.0" mnemonicParsing="false" onAction="#onChoseFile" prefHeight="26.0" prefWidth="230.0" text="Ajouter photo de profil" />
+                  <ImageView fx:id="imgprofil" fitHeight="241.0" fitWidth="230.0" layoutX="356.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true" />
+      
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>
